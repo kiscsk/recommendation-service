@@ -101,6 +101,11 @@ Note: run integration-tests
 ./mvnw clean verify
 ```
 
+### Test Coverage
+* Jacoco is added to the project to generate code coverage report  
+
+Note: No unit test for CSVPriceLoader and excluded from the report
+
 ## Contribution Guidelines
 * Fork the repository and create your feature branch. 
 * Write clear, tested code and add JavaDoc. 
@@ -109,6 +114,8 @@ Note: run integration-tests
 
 ## Special notes, potential enhancements
 * The service uses an in-memory repository. For production, consider a persistent database. 
+* Static code analyzer should be added
+* Unit test for CSVPriceLoader should be added. 
 * Maven wrapper included for least requirements.
 * Rate limiting is IP-based and can be configured in RateLimitFilter.java.
 * CSV files should be placed in the resources/prices directory and follow the format: timestamp,symbol,price.
