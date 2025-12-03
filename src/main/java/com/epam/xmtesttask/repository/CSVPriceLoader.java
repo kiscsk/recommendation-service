@@ -10,7 +10,6 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.math.BigDecimal;
 import java.math.MathContext;
-import java.math.RoundingMode;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.nio.file.Files;
@@ -48,7 +47,7 @@ public class CSVPriceLoader {
                     .filter(Files::isRegularFile)
                     .map(Path::toString)
                     .filter(filePath -> filePath.endsWith("_values.csv"))
-                    .map(filePath -> filePath.substring(filePath.indexOf("prices") - 1))
+                    .map(filePath -> filePath.substring(filePath.indexOf("prices")))
                     .toList();
         } catch (IOException | URISyntaxException e) {
             throw new RuntimeException(e);
