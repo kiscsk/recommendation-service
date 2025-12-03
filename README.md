@@ -113,10 +113,14 @@ Note: No unit test for CSVPriceLoader and excluded from the report
 * Submit a pull request with a description of your changes.
 
 ## Special notes, potential enhancements
-* The service uses an in-memory repository. For production, consider a persistent database. 
-* Static code analyzer should be added
-* Unit test for CSVPriceLoader should be added. 
+* Currently supported cryptos: BTC, DOGE, ETH, LTC, XRP
 * Maven wrapper included for least requirements.
 * Rate limiting is IP-based and can be configured in RateLimitFilter.java.
 * CSV files should be placed in the resources/prices directory and follow the format: timestamp,symbol,price.
+
+## Potential Enhancements
+* The service uses an in-memory repository. For production, consider a persistent database.
+* Static code analyzer should be added
+* Unit test for CSVPriceLoader should be added. 
+* Proper logging should be added.
 * Containerization is a requirement (wasn't able to create a local docker up and running on a windows machine)
